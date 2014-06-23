@@ -1,31 +1,33 @@
 <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization',
        'version':'1','packages':['timeline']}]}"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+
+<canvas id="example1" style="width: 900px; height: 180px;"></canvas>
 <script type="text/javascript">
-    google.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-        var container = document.getElementById('example1');
-
-        var chart = new google.visualization.Timeline(container);
-
-        var dataTable = new google.visualization.DataTable();
-
-        dataTable.addColumn({ type: 'string', id: 'President' });
-        dataTable.addColumn({ type: 'date', id: 'Start' });
-        dataTable.addColumn({ type: 'date', id: 'End' });
-
-        dataTable.addRows([
-            [ 'Sprint 1', new Date(2014, 1, 1), new Date(2014, 1, 14) ],
-            [ 'Sprint 2', new Date(2014, 1, 15), new Date(2014, 1, 30) ],
-            [ 'Sprint 3', new Date(2014, 2, 1), new Date(2014, 2, 14) ]
-        ]);
-
-        chart.draw(dataTable);
+    var ctx = document.getElementById("example1").getContext("2d");
+    var data = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                fillColor: "rgba(220,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                data: [65, 59, 90, 81, 56, 55, 40]
+            },
+            {
+                fillColor: "rgba(151,187,205,0.5)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                data: [28, 48, 40, 19, 96, 27, 100]
+            }
+        ]
     }
+    var myNewChart = new Chart(ctx).Line(data);
 </script>
-<div id="example1" style="width: 900px; height: 180px;"></div>
 
 
-<div id="chart" style="width: 900px; height: 500px;"></div>
+<div id="chart" width="900px" height="300px"></div>
 
 <%= @chart.render_chart('chart') %>
