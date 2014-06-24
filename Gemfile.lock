@@ -33,6 +33,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.15)
+    awesome_print (1.2.0)
     builder (3.1.4)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -122,6 +123,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   charter!
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)

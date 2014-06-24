@@ -45,3 +45,4 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'charter', :path => '/home/jitu/projects/charter'
+gem 'awesome_print'
