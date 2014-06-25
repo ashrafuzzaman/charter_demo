@@ -1,5 +1,3 @@
-<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization',
-       'version':'1','packages':['timeline']}]}"></script>
 <h1>In web</h1>
 <div id="chart" style="width: 900px; height: 180px;"></div>
 <%= @chart.render_chart('chart') %>
@@ -12,8 +10,4 @@
 <%= @pie_chart.render_chart('pie_chart') %>
 
 <h1>Pie In image</h1>
-<!--<img src='data:image/png;base64,<%#=  Base64.encode64(@pie_chart.to_blob) %>' />-->
-
-<div id="example1" style="width: 900px; height: 180px;"></div>
-<script type="text/javascript">
-</script>
+<img src='data:image/png;base64,<%=  Base64.encode64(@pie_chart.to_blob) %>' />

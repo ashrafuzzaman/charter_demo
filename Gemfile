@@ -44,5 +44,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'charter', :path => '/home/jitu/projects/charter'
+# gem 'chartify', :path => '/home/jitu/projects/charter'
+gem 'chartify', '0.1.1'
 gem 'awesome_print'

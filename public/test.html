@@ -1,0 +1,17 @@
+<h1>Pie in web</h1>
+<div id="pie_chart" style="width: 900px; height: 180px;"></div>
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization',
+       'version':'1','packages':['timeline']}]}"></script>
+<script type="application/javascript" class="chart_script">
+    google.load("visualization", "1", {packages: ["corechart"]});
+    google.setOnLoadCallback(function () {
+        var data = google.visualization.arrayToDataTable([
+            ["lang", 'amount'],
+            ["ruby", 100],
+            ["python", 12]
+        ]);
+        var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
+        chart.draw(data, {"title": null, "backgroundColor": "#FFFFFF", "colors": ["#3366CC", "#DC3912", "#FF9900", "#109618", "#990099", "#0099C6", "#DD4477"], "vAxis": {"baselineColor": "#666666", "gridlines": {"color": "#666666"}, "textStyle": {"color": "#666666"}}, "hAxis": {"baselineColor": "#666666", "gridlines": {"color": "#666666"}, "textStyle": {"color": "#666666"}}, "legend": {"textStyle": {"color": "#666666"}}, "lineWidth": 2});
+    });
+
+</script>
