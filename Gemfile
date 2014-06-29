@@ -50,6 +50,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# gem 'chartify', :path => '/home/jitu/projects/charter'
-gem 'chartify', '0.1.1'
+# gem 'chartify', :path => '/home/jitu/projects/chartify'
+gem 'chartify', '0.2.0'
 gem 'awesome_print'
