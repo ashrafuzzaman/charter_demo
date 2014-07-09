@@ -1,9 +1,9 @@
 <h1>In web</h1>
 <div id="chart" style="width: 900px; height: 180px;"></div>
-<%= @chart.render_chart('chart') %>
+<%= @line_chart.render_chart('chart') %>
 
 <h1>In image</h1>
-<img src='data:image/png;base64,<%=  Base64.encode64(@chart.to_blob) %>' />
+<img src='data:image/png;base64,<%=  Base64.encode64(@line_chart.to_blob) %>' />
 
 <h1>Pie in web</h1>
 <div id="pie_chart" style="width: 900px; height: 180px;"></div>

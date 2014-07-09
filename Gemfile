@@ -51,5 +51,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # gem 'chartify', :path => '/home/jitu/projects/chartify'
-gem 'chartify', '0.2.2'
+gem 'chartify', '0.3.0'
 gem 'awesome_print'
